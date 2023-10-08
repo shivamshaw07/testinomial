@@ -26,6 +26,13 @@ const Card = (props) => {
         }
         console.log(current)
     }
+
+    const random = () => {
+        const randomNumber = Math.random() * 6; // Generates a random number between 0 (inclusive) and 6 (exclusive)
+        const randomInt = Math.floor(randomNumber); // Converts it to an integer between 0 and 5
+        setCurrent(randomInt);
+    }
+    
   return (
     <div className='relative w-[70vw] lg:w-[40vw] h-auto gap-4 bg-white shadow-2xl flex flex-col items-center justify-center py-8 px-5 rounded-md'>
       <div className='lg:absolute top-[-4rem] h-[17vh] left-4'>
@@ -43,7 +50,7 @@ const Card = (props) => {
         <button onClick={currentHanlderPrev}><FcPrevious/></button>
         <button onClick={currentHanlderNext}><FcNext/></button>
       </div>
-      <button className='py-2 px-4 bg-[#4343a4] font-semibold rounded-md'>Surprise me</button>
+      <button onClick={random} className='py-2 px-4 bg-[#4343a4] font-semibold rounded-md'>Surprise me</button>
     </div>
   )
 }
