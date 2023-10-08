@@ -29,8 +29,8 @@ const Card = (props) => {
   return (
     <div className='relative w-[70vw] lg:w-[40vw] h-auto gap-4 bg-white shadow-2xl flex flex-col items-center justify-center py-8 px-5 rounded-md'>
       <div className='lg:absolute top-[-4rem] h-[17vh] left-4'>
-        <img src={reviews[current].image} alt="hola" className='h-[100%] rounded-full z-30 relative'/>
-        <div className='w-[8rem] h-[8rem] lg:block hidden absolute rounded-full bg-[#4343a4] top-[-.2rem] left-1 z-0'></div>
+        <img src={reviews[current].image} alt="hola" className='w-[9rem] h-[9rem] rounded-full z-30 relative'/>
+        <div className='w-[9rem] h-[9rem] lg:block hidden absolute rounded-full bg-[#4343a4] top-[-.2rem] left-1 z-0'></div>
       </div>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='font-bold text-lg'>{reviews[current].name}</h1>
